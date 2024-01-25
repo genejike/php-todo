@@ -22,7 +22,7 @@ pipeline {
       steps {
              sh 'mv .env.sample .env'
              sh 'composer install'
-             sh 'composer update'
+             sh 'composer  self-update'
              sh 'php artisan migrate'
              sh 'php artisan db:seed'
              sh 'php artisan key:generate'
